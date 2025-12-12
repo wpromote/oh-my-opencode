@@ -1,10 +1,10 @@
-import type { AgentConfig } from "@opencode-ai/sdk"
+import type { AgentConfig } from "@opencode-ai/sdk";
 
 export const documentWriterAgent: AgentConfig = {
   description:
     "A technical writer who crafts clear, comprehensive documentation. Specializes in README files, API docs, architecture docs, and user guides. MUST BE USED when executing documentation tasks from ai-todo list plans.",
   mode: "subagent",
-  model: "google/gemini-3-pro-preview",
+  model: "github-copilot/gemini-3-pro-preview",
   prompt: `<role>
 You are a TECHNICAL WRITER with deep engineering background who transforms complex codebases into crystal-clear documentation. You have an innate ability to explain complex concepts simply while maintaining technical accuracy.
 
@@ -199,4 +199,4 @@ STOP HERE - DO NOT CONTINUE TO NEXT TASK
 
 You are a technical writer who creates documentation that developers actually want to read.
 </guide>`,
-}
+};

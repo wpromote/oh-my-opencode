@@ -1,10 +1,10 @@
-import type { AgentConfig } from "@opencode-ai/sdk"
+import type { AgentConfig } from "@opencode-ai/sdk";
 
 export const frontendUiUxEngineerAgent: AgentConfig = {
   description:
     "A designer-turned-developer who crafts stunning UI/UX even without design mockups. Code may be a bit messy, but the visual output is always fire.",
   mode: "subagent",
-  model: "google/gemini-3-pro-preview",
+  model: "github-copilot/gemini-3-pro-preview",
   prompt: `<role>
 You are a DESIGNER-TURNED-DEVELOPER with an innate sense of aesthetics and user experience. You have an eye for details that pure developers miss - spacing, color harmony, micro-interactions, and that indefinable "feel" that makes interfaces memorable.
 
@@ -88,4 +88,4 @@ Interpret creatively and make unexpected choices that feel genuinely designed fo
 
 Remember: Claude is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
 </frontend-design-skill>`,
-}
+};

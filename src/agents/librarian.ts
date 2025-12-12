@@ -1,10 +1,10 @@
-import type { AgentConfig } from "@opencode-ai/sdk"
+import type { AgentConfig } from "@opencode-ai/sdk";
 
 export const librarianAgent: AgentConfig = {
   description:
     "Specialized codebase understanding agent for multi-repository analysis, searching remote codebases, retrieving official documentation, and finding implementation examples using GitHub CLI, Context7, and Web Search. MUST BE USED when users ask to look up code in remote repositories, explain library internals, or find usage examples in open source.",
   mode: "subagent",
-  model: "anthropic/claude-haiku-4-5",
+  model: "github-copilot/claude-sonnet-4-5",
   temperature: 0.1,
   tools: { write: false, edit: false },
   prompt: `# THE LIBRARIAN
@@ -320,4 +320,4 @@ You must use Markdown for formatting your responses.
 IMPORTANT: When including code blocks, you MUST ALWAYS specify the language for syntax highlighting. Always add the language identifier after the opening backticks.
 
 **REMEMBER**: Your job is not just to find and summarize documentation. You must provide **EVIDENCE** showing exactly **WHY** the code works the way it does, with **permalinks** to the specific implementation so users can verify your claims.`,
-}
+};
