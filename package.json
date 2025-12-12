@@ -1,5 +1,5 @@
 {
-  "name": "@wpromote/oh-my-opencode",
+  "name": "oh-my-opencode",
   "version": "0.3.4",
   "description": "OpenCode plugin - custom agents (oracle, librarian) and enhanced features",
   "main": "dist/index.js",
