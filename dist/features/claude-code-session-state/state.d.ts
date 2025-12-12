@@ -1,0 +1,13 @@
+import type { SessionErrorState, SessionInterruptState } from "./types";
+export declare const sessionErrorState: Map<string, SessionErrorState>;
+export declare const sessionInterruptState: Map<string, SessionInterruptState>;
+export declare const subagentSessions: Set<string>;
+export declare const sessionFirstMessageProcessed: Set<string>;
+export declare let currentSessionID: string | undefined;
+export declare let currentSessionTitle: string | undefined;
+export declare let mainSessionID: string | undefined;
+export declare function setCurrentSession(id: string | undefined, title: string | undefined): void;
+export declare function setMainSession(id: string | undefined): void;
+export declare function getCurrentSessionID(): string | undefined;
+export declare function getCurrentSessionTitle(): string | undefined;
+export declare function getMainSessionID(): string | undefined;
