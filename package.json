@@ -1,5 +1,5 @@
 {
-  "name": "oh-my-opencode",
+  "name": "@wpromote/oh-my-opencode",
   "version": "0.3.4",
   "description": "OpenCode plugin - custom agents (oracle, librarian) and enhanced features",
   "main": "dist/index.js",
@@ -13,14 +13,10 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./google-auth": {
-      "types": "./dist/google-auth.d.ts",
-      "import": "./dist/google-auth.js"
-    },
     "./schema.json": "./dist/oh-my-opencode.schema.json"
   },
   "scripts": {
-    "build": "bun build src/index.ts src/google-auth.ts --outdir dist --target bun --format esm --external @ast-grep/napi && tsc --emitDeclarationOnly && bun run build:schema",
+    "build": "bun build src/index.ts --outdir dist --target bun --format esm --external @ast-grep/napi && tsc --emitDeclarationOnly && bun run build:schema",
     "build:schema": "bun run script/build-schema.ts",
     "clean": "rm -rf dist",
     "prepublishOnly": "bun run clean && bun run build",
@@ -50,7 +46,6 @@
     "@ast-grep/napi": "^0.40.0",
     "@code-yeongyu/comment-checker": "^0.5.0",
     "@opencode-ai/plugin": "^1.0.150",
-
     "picomatch": "^4.0.2",
     "xdg-basedir": "^5.1.0",
     "zod": "^4.1.8"
@@ -58,7 +53,6 @@
   "devDependencies": {
     "@types/picomatch": "^3.0.2",
     "bun-types": "latest",
-    "oh-my-opencode": "^0.1.30",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
